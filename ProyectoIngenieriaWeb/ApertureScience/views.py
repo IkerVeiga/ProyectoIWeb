@@ -30,4 +30,15 @@ def productsList(request):
 def productDetail(request, id):
     product = Product.objects.get(id = id)
     returnText = "Nombre: " + product.name + "\n\tDescripcion: " + product.description + "\n\tPrecio: " + str(product.price) + "$" +"\n\tVersión: " + product.version
+
+def testSubjectsList(request):
+    returnText = ""
+    for testSubject in TestSubject.objects.all():
+        returnText += testSubject.__str__() + "\n"
+    return HttpResponse(returnText)
+
+def testSubjectDetail(request, number):
+    testSubject = TestSubject.objects.get(number = number)
+    returnText = "Nombre: "+testSubject.name + "\n\tApellido:" + testSubject.surname + "\n\tFecha de nacimiento: " + str(testSubject.birthdate) + "\n\tLugar de nacimiento: " + testSubject.birthplace
+
     return HttpResponse(returnText)
