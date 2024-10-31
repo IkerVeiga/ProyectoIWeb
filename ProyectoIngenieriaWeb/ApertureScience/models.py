@@ -19,7 +19,7 @@ class Product(models.Model):
     version = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.name + " - " + self.version
+        return str(self.name) + " - " + self.version
 
 class Experiment(models.Model):
     name = models.CharField(max_length=50)

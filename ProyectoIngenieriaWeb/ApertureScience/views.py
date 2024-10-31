@@ -15,8 +15,19 @@ def experimentsList(request):
 
 def experimentDetail(request ,id):
     experiment = Experiment.objects.get(id = id)
-    returnText = "Nombre: "+experiment.name + "\n\tDescripccion:" + experiment.description + "\n\tPorcentaje de exito: " + str(experiment.successRate) + "\n\tSujetos involucrado:"
+    returnText = "Nombre: "+experiment.name + "\n\tDescripcion:" + experiment.description + "\n\tPorcentaje de exito: " + str(experiment.successRate) + "\n\tSujetos involucrado:"
     for testSubject in experiment.testSubjects.all():
         returnText+= "\n\t\t" + testSubject.name
     returnText += "\n\tProducto:" + experiment.products.name
+    return HttpResponse(returnText)
+
+def productsList(request):
+    returnText = ""
+    for product in Product.objects.all():
+        returnText += product.__str__() + "\n"
+    return HttpResponse(returnText)
+
+def productDetail(request, id):
+    product = Product.objects.get(id = id)
+    returnText = "Nombre: " + product.name + "\n\tDescripcion: " + product.description + "\n\tPrecio: " + str(product.price) + "$" +"\n\tVersión: " + product.version
     return HttpResponse(returnText)
