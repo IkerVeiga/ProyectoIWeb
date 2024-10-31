@@ -20,3 +20,14 @@ def experimentDetail(request ,id):
         returnText+= "\n\t\t" + testSubject.name
     returnText += "\n\tProducto:" + experiment.products.name
     return HttpResponse(returnText)
+
+def testSubjectsList(request):
+    returnText = ""
+    for testSubject in TestSubject.objects.all():
+        returnText += testSubject.__str__() + "\n"
+    return HttpResponse(returnText)
+
+def testSubjectDetail(request, number):
+    testSubject = TestSubject.objects.get(number = number)
+    returnText = "Nombre: "+testSubject.name + "\n\tApellido:" + testSubject.surname + "\n\tFecha de nacimiento: " + str(testSubject.birthdate) + "\n\tLugar de nacimiento: " + testSubject.birthplace
+    return HttpResponse(returnText)
