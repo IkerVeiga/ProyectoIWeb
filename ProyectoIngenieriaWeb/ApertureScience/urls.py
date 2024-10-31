@@ -3,10 +3,10 @@ from . import views
 
 urlpatterns = [
     path('', views.holaMundo, name='holaMundo'),
-    path('experimentos', views.experimentsList,name="experimentosLista"),
-    path('experimentos/<int:id>', views.experimentDetail, name = "experimentDetail" ),
-    path('Products', views.productsList, name = "productsList"),
-    path('Products/<int:id>', views.productDetail, name = "productDetail"),
-    path('sujetos', views.testSubjectsList, name = "testSubjectsList"),
-    path('sujetos/<int:number>', views.testSubjectDetail, name = "testSubjectDetail"),
+    path('experiments', views.experimentsList,name="experimentosLista"),
+    path('experiments/<int:id>', views.experimentDetail, name = "experimentDetail" ),
+    path('products', views.productsList, name = "productsList"),
+    path('products/<int:id>', views.productDetail, name = "productDetail"),
+    path('subjects', views.testSubjectsList, name = "testSubjectsList"),
+    path('subjects/<int:number>', views.testSubjectDetail, name = "testSubjectDetail"),
 ]
