@@ -37,8 +37,14 @@ def testSubjectsList(request):
         returnText += testSubject.__str__() + "\n"
     return HttpResponse(returnText)
 
+# def testSubjectDetail(request, number):
+#     testSubject = TestSubject.objects.get(number = number)
+#     returnText = "Nombre: "+testSubject.name + "\n\tApellido:" + testSubject.surname + "\n\tFecha de nacimiento: " + str(testSubject.birthdate) + "\n\tLugar de nacimiento: " + testSubject.birthplace
+
+#     return HttpResponse(returnText)
+
 def testSubjectDetail(request, number):
     testSubject = TestSubject.objects.get(number = number)
-    returnText = "Nombre: "+testSubject.name + "\n\tApellido:" + testSubject.surname + "\n\tFecha de nacimiento: " + str(testSubject.birthdate) + "\n\tLugar de nacimiento: " + testSubject.birthplace
+    context = {"testSubject": testSubject}
+    return render(request, "testSubjectDetail.html", context)
 
-    return HttpResponse(returnText)
