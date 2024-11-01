@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Sujetos de pruebas</title>
+    </head>
+    <body>
+        <h1>Sujetos de prueba:</h1>
+        <ul>
+            {% for testSubject in testSubjects %}
+            <li><a href = "{% url 'testSubjectDetail' testSubject.number %}">{{ testSubject.number }} - {{ testSubject.name }} {{ testSubject.surname }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

@@ -31,11 +31,15 @@ def productDetail(request, id):
     product = Product.objects.get(id = id)
     returnText = "Nombre: " + product.name + "\n\tDescripcion: " + product.description + "\n\tPrecio: " + str(product.price) + "$" +"\n\tVersión: " + product.version
 
+# def testSubjectsList(request):
+#     returnText = ""
+#     for testSubject in TestSubject.objects.all():
+#         returnText += testSubject.__str__() + "\n"
+#     return HttpResponse(returnText)
+
 def testSubjectsList(request):
-    returnText = ""
-    for testSubject in TestSubject.objects.all():
-        returnText += testSubject.__str__() + "\n"
-    return HttpResponse(returnText)
+    context = {"testSubjects":TestSubject.objects.all}
+    return render(request, "testSubjectList.html", context)
 
 # def testSubjectDetail(request, number):
 #     testSubject = TestSubject.objects.get(number = number)
