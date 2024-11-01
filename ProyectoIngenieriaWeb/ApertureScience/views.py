@@ -49,6 +49,7 @@ def testSubjectsList(request):
 
 def testSubjectDetail(request, number):
     testSubject = TestSubject.objects.get(number = number)
+    # print("Primary key: "+ str(testSubject.pk) + " - Number : " + str(testSubject.number))
     context = {"testSubject": testSubject}
     return render(request, "testSubjectDetail.html", context)
 

@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class TestSubject(models.Model):
-    number = models.IntegerField() #Especificar como clave primaria
+    number = models.IntegerField(primary_key=True) #Especificar como clave primaria
     name = models.CharField(max_length=50)
     surname = models.CharField(max_length=50)
     birthdate = models.DateField()
