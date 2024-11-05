@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Experimentos</title>
+    </head>
+
+    <body>
+        <h1>Experimentos</h1>
+        {%for experiment in experiments%}
+            <li><a href="{% url 'experimentDetail' experiment.pk%}"> {{experiment.name}} - {{experiment.successRate}}</a></li>
+        {% endfor %}
+    </body>
+</html>

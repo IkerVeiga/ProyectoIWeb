@@ -7,11 +7,11 @@ from .models import *
 def holaMundo(request):
     return HttpResponse("Hola Mundo")
 
-def experimentsList(request):
-    returnText = ""
-    for experiment in Experiment.objects.all():
-        returnText += experiment.__str__() + "\n"
-    return HttpResponse(returnText)
+# def experimentsList(request):
+#     returnText = ""
+#     for experiment in Experiment.objects.all():
+#         returnText += experiment.__str__() + "\n"
+#     return HttpResponse(returnText)
 
 # def experimentDetail(request ,id):
 #     experiment = Experiment.objects.get(id = id)
@@ -20,6 +20,10 @@ def experimentsList(request):
 #         returnText+= "\n\t\t" + testSubject.name
 #     returnText += "\n\tProducto:" + experiment.products.name
 #     return HttpResponse(returnText)
+
+def experimentsList(request):
+    context = {"experiments":Experiment.objects.all}
+    return render(request,"experimentList.html",context)
 
 def experimentDetail(request ,id):
     experiment = Experiment.objects.get(id = id)
