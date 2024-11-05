@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ experiment.name }}</title>
+    </head>
+    <body>
+        <h2>{{ experiment.name }}</h2>
+        <p>Fecha de inicio: {{ experiment.startDate }}</p>
+        <p>Fecha de finalización: {{ experiment.endDate }}</p>
+        <p>Descripción: {{ experiment.description }}</p>
+        <p>Participantes:</p>
+        <ul>
+            {% for testSubject in experiment.testSubjects.all %}
+                <li><a href="{% url 'testSubjectDetail' testSubject.pk %}">{{ testSubject.name }} {{ testSubject.surname }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </body>
+
+</html>
