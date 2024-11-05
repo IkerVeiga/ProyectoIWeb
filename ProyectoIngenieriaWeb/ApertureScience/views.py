@@ -7,6 +7,9 @@ from .models import *
 def holaMundo(request):
     return HttpResponse("Hola Mundo")
 
+def index(request):
+    return render(request, "index.html")
+
 def experimentsList(request):
     returnText = ""
     for experiment in Experiment.objects.all():
