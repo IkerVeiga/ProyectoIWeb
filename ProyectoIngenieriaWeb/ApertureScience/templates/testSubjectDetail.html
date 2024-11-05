@@ -1,13 +1,14 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>{{ testSubject.number}} - {{ testSubject.name }} {{testSubject.surname}}</title>
     </head>
     <body>
         <h2>{{ testSubject.name }} {{testSubject.surname}}</h2>
-        <p>Number: {{ testSubject.number }}</p>
-        <p>Birthdate: {{testSubject.birthdate}}</p>
-        <p>Birthplace: {{testSubject.birthplace}}</p>
-        <p>Formó parte de los siguientes experimentos:</p>
+        <p>Número: {{ testSubject.number }}</p>
+        <p>Fecha de nacimiento: {{testSubject.birthdate}}</p>
+        <p>Lugar de nacimiento: {{testSubject.birthplace}}</p>
+        <p>Formó parte en las siguientes pruebas:</p>
         <ul>
             {% for experiment in testSubject.experiments.all %}
                 <li><a href="{% url 'experimentDetail' experiment.pk %}">{{ experiment.name }}</a></li>
