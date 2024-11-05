@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Productos</title>
+    </head>
+    <body>
+        <h1>Productos</h1>
+        <ul>
+            {% for product in products %}
+            <li><a href = "{% url 'productDetail' product.pk %}">{{product.name}} - {{product.description}} || Precio: {{product.price}}$ || Version: {{product.version}}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

@@ -21,15 +21,24 @@ def experimentDetail(request ,id):
     returnText += "\n\tProducto:" + experiment.products.name
     return HttpResponse(returnText)
 
+# def productsList(request):
+#     returnText = ""
+#     for product in Product.objects.all():
+#         returnText += product.__str__() + "\n"
+#     return HttpResponse(returnText)
+
 def productsList(request):
-    returnText = ""
-    for product in Product.objects.all():
-        returnText += product.__str__() + "\n"
-    return HttpResponse(returnText)
+    context = {"products":Product.objects.all}
+    return render(request, "productList.html", context)
+
+# def productDetail(request, id):
+#     product = Product.objects.get(id = id)
+#     returnText = "Nombre: " + product.name + "\n\tDescripcion: " + product.description + "\n\tPrecio: " + str(product.price) + "$" +"\n\tVersión: " + product.version
 
 def productDetail(request, id):
     product = Product.objects.get(id = id)
-    returnText = "Nombre: " + product.name + "\n\tDescripcion: " + product.description + "\n\tPrecio: " + str(product.price) + "$" +"\n\tVersión: " + product.version
+    context = {"product": product}
+    return render(request, "productDetail.html", context)
 
 # def testSubjectsList(request):
 #     returnText = ""
