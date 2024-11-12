@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Experimentos</title>
+        <title>Pruebas</title>
     </head>
 
     <body>
-        <h1>Experimentos</h1>
+        <h1>Pruebas</h1>
         {%for experiment in experiments%}
-            <li><a href="{% url 'experimentDetail' experiment.pk%}"> {{experiment.name}} - {{experiment.successRate}}</a></li>
+            <li><a href="{% url 'experimentDetail' experiment.pk%}"> {{experiment.name}}</a></li>
         {% endfor %}
+        <br>
+        <br>
+        <br>
+        <a href = "{% url 'index' %}">Volver al inicio</a>
     </body>
 </html>

@@ -5,15 +5,18 @@
     </head>
     <body>
         <h2>{{ experiment.name }}</h2>
-        <p>Fecha de inicio: {{ experiment.startDate }}</p>
-        <p>Fecha de finalización: {{ experiment.endDate }}</p>
         <p>Descripción: {{ experiment.description }}</p>
+        <p>Porcentaje de éxito: {{ successPercentaje }}%</p>
         <p>Participantes:</p>
         <ul>
             {% for testSubject in experiment.testSubjects.all %}
                 <li><a href="{% url 'testSubjectDetail' testSubject.pk %}">{{ testSubject.name }} {{ testSubject.surname }}</a></li>
             {% endfor %}
         </ul>
+        <br>
+        <br>
+        <br>
+        <a href = "{% url 'index' %}">Volver al inicio</a>
 
     </body>
 

@@ -30,7 +30,8 @@ def experimentsList(request):
 
 def experimentDetail(request ,id):
     experiment = Experiment.objects.get(id = id)
-    context = {"experiment": experiment}
+    context = {"experiment": experiment,
+               "successPercentaje": experiment.successRate * 100}
     return render(request, "experimentDetail.html", context)
 
 # def productsList(request):
