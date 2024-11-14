@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import *
+from django.views.generic import ListView, DetailView
 
 # Create your views here.
 
@@ -24,54 +25,43 @@ def index(request):
 #     returnText += "\n\tProducto:" + experiment.products.name
 #     return HttpResponse(returnText)
 
-def experimentsList(request):
-    context = {"experiments":Experiment.objects.all}
-    return render(request,"experimentList.html",context)
+class ExperimentsList(ListView):
+	model = Experiment
+	template_name = 'experimentList.html'
+	context_object_name = 'experiments'
+	queryset = Experiment.objects.order_by('name')
 
-def experimentDetail(request ,id):
-    experiment = Experiment.objects.get(id = id)
-    context = {"experiment": experiment,
-               "successPercentaje": experiment.successRate * 100}
-    return render(request, "experimentDetail.html", context)
 
-# def productsList(request):
-#     returnText = ""
-#     for product in Product.objects.all():
-#         returnText += product.__str__() + "\n"
-#     return HttpResponse(returnText)
+class ExperimentDetail(DetailView):
+    model = Experiment
+    template_name = 'experimentDetail.html'
+    context_object_name = 'experiment'
 
-def productsList(request):
-    context = {"products":Product.objects.all}
-    return render(request, "productList.html", context)
+    def get_context_data(self, **kwargs):
+        # Cargar el contexto base
+        context = super().get_context_data(**kwargs)
+        # Añadir un listado de departamentos
+        context['successPercentaje'] = self.get_object().successRate * 100
+        return context
 
-# def productDetail(request, id):
-#     product = Product.objects.get(id = id)
-#     returnText = "Nombre: " + product.name + "\n\tDescripcion: " + product.description + "\n\tPrecio: " + str(product.price) + "$" +"\n\tVersión: " + product.version
+class ProductsList(ListView):
+    model = Product
+    template_name = 'productList.html'
+    context_object_name = 'products'
+    queryset = Product.objects.order_by('name')
 
-def productDetail(request, id):
-    product = Product.objects.get(id = id)
-    context = {"product": product}
-    return render(request, "productDetail.html", context)
+class ProductDetail(DetailView):
+    model = Product
+    template_name = 'productDetail.html'
+    context_object_name = 'product'
 
-# def testSubjectsList(request):
-#     returnText = ""
-#     for testSubject in TestSubject.objects.all():
-#         returnText += testSubject.__str__() + "\n"
-#     return HttpResponse(returnText)
+class TestSubjectsList(ListView):
+    model = TestSubject
+    template_name = 'testSubjectList.html'
+    context_object_name = 'testSubjects'
+    queryset = TestSubject.objects.order_by('number')
 
-def testSubjectsList(request):
-    context = {"testSubjects":TestSubject.objects.all}
-    return render(request, "testSubjectList.html", context)
-
-# def testSubjectDetail(request, number):
-#     testSubject = TestSubject.objects.get(number = number)
-#     returnText = "Nombre: "+testSubject.name + "\n\tApellido:" + testSubject.surname + "\n\tFecha de nacimiento: " + str(testSubject.birthdate) + "\n\tLugar de nacimiento: " + testSubject.birthplace
-
-#     return HttpResponse(returnText)
-
-def testSubjectDetail(request, number):
-    testSubject = TestSubject.objects.get(number = number)
-    # print("Primary key: "+ str(testSubject.pk) + " - Number : " + str(testSubject.number))
-    context = {"testSubject": testSubject}
-    return render(request, "testSubjectDetail.html", context)
-
+class TestSubjectDetail(DetailView):
+    model = TestSubject
+    template_name = 'testSubjectDetail.html'
+    context_object_name = 'testSubject'
