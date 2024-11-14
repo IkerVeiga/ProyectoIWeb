@@ -17,6 +17,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.FloatField()
     version = models.CharField(max_length=10)
+    image = models.URLField(max_length=600, null=True, blank=True)
 
     def __str__(self):
         return str(self.name) + " - " + self.version
@@ -25,6 +26,7 @@ class Experiment(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
     successRate = models.FloatField()
+    image = models.URLField(max_length=600, null=True, blank=True)
 
     testSubjects = models.ManyToManyField(TestSubject,  related_name="experiments")
     #Cambiar la products por product porque solo hay un producto por experimento
