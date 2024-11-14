@@ -1,9 +1,11 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>Productos</title>
     </head>
     <body>
+        {% block contenido %}
         <h1>Productos</h1>
         <ul>
             {% for product in products %}
@@ -14,5 +16,6 @@
         <br>
         <br>
         <a href = "{% url 'index' %}">Volver al inicio</a>
+        {% endblock %}
     </body>
 </html>

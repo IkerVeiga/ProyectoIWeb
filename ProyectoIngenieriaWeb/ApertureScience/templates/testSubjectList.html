@@ -1,9 +1,11 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>Sujetos de prueba</title>
     </head>
     <body>
+        {% block contenido %}
         <h1>Sujetos de prueba:</h1>
         <ul>
             {% for testSubject in testSubjects %}
@@ -14,5 +16,6 @@
         <br>
         <br>
         <a href = "{% url 'index' %}">Volver al inicio</a>
+        {% endblock %}
     </body>
 </html>

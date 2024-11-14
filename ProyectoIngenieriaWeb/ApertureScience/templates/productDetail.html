@@ -1,9 +1,11 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>{{product.pk}} - {{product.name}}</title>
     </head>
         <body>
+            {% block contenido %}
             <h2>{{product.pk}} - {{product.name}}</h2>
             <img src="{{product.image}}"></img> <!-- Falta alt y tamaño-->
             <p>Descripción: {{product.description}}</p>
@@ -16,8 +18,10 @@
                 {% endfor %}
             </ul>
             <br>
-        <br>
-        <br>
-        <a href = "{% url 'index' %}">Volver al inicio</a>
+            <br>
+            <br>
+            <a href = "{% url 'index' %}">Volver al inicio</a>
+            {% endblock %}
+
         </body>
 </html>

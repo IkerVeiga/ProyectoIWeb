@@ -1,9 +1,11 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>{{ experiment.name }}</title>
     </head>
     <body>
+        {% block contenido %}
         <h2>{{ experiment.name }}</h2>
         <img src="{{ experiment.image }}" alt="Foto de la cámara de pruebas"></img>
         <p>Descripción: {{ experiment.description }}</p>
@@ -18,7 +20,7 @@
         <br>
         <br>
         <a href = "{% url 'index' %}">Volver al inicio</a>
-
+        {% endblock %}
     </body>
 
 </html>
