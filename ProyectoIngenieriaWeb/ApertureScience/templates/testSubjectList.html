@@ -12,6 +12,10 @@
             <li><a href = "{% url 'testSubjectDetail' testSubject.number %}">{{ testSubject.number }} - {{ testSubject.name }} {{ testSubject.surname }}</a></li>
             {% endfor %}
         </ul>
+        <br>
+        <br>
+        <br>
+        <a href = "{% url 'index' %}">Volver al inicio</a>
         {% endblock %}
     </body>
 </html>

@@ -7,15 +7,21 @@
         <body>
             {% block contenido %}
             <h2>{{product.pk}} - {{product.name}}</h2>
-            <p>Name: {{product.name}}</p>
-            <p>Description: {{product.description}}</p>
-            <p>Price: {{product.price}}$</p>
-            <p>Version: {{product.version}}</p>
+            <p>Nnombre: {{product.name}}</p>
+            <p>Descripción: {{product.description}}</p>
+            <p>Precio: {{product.price}}$</p>
+            <p>Versión: {{product.version}}</p>
+            <p>Pruebas relacionadas: </p>
             <ul>
                 {% for experiment in product.experiments.all %}
                     <li><a href="{% url 'experimentDetail' experiment.pk %}">{{experiment.name}}</a></li>
                 {% endfor %}
             </ul>
+            <br>
+            <br>
+            <br>
+            <a href = "{% url 'index' %}">Volver al inicio</a>
             {% endblock %}
+
         </body>
 </html>

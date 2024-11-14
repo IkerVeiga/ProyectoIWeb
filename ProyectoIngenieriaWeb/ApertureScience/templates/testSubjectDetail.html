@@ -16,6 +16,11 @@
                 <li><a href="{% url 'experimentDetail' experiment.pk %}">{{ experiment.name }}</a></li>
             {% endfor %}
         </ul>
+        <br>
+        <br>
+        <br>
+        <a href = "{% url 'index' %}">Volver al inicio</a>
         {% endblock %}
+
     </body>    
 </html>
