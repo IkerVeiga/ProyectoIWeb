@@ -1,14 +1,17 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>Productos</title>
     </head>
     <body>
+        {% block contenido %}
         <h1>Productos</h1>
         <ul>
             {% for product in products %}
             <li><a href = "{% url 'productDetail' product.pk %}">{{product.name}} - {{product.description}}</a></li>
             {% endfor %}
         </ul>
+        {% endblock %}
     </body>
 </html>

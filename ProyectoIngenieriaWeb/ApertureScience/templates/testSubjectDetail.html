@@ -1,9 +1,11 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>{{ testSubject.number}} - {{ testSubject.name }} {{testSubject.surname}}</title>
     </head>
     <body>
+        {% block contenido %}
         <h2>{{ testSubject.name }} {{testSubject.surname}}</h2>
         <p>Número: {{ testSubject.number }}</p>
         <p>Fecha de nacimiento: {{testSubject.birthdate}}</p>
@@ -14,5 +16,6 @@
                 <li><a href="{% url 'experimentDetail' experiment.pk %}">{{ experiment.name }}</a></li>
             {% endfor %}
         </ul>
+        {% endblock %}
     </body>    
 </html>

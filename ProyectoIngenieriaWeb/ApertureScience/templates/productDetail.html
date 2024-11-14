@@ -1,9 +1,11 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>{{product.pk}} - {{product.name}}</title>
     </head>
         <body>
+            {% block contenido %}
             <h2>{{product.pk}} - {{product.name}}</h2>
             <p>Name: {{product.name}}</p>
             <p>Description: {{product.description}}</p>
@@ -14,5 +16,6 @@
                     <li><a href="{% url 'experimentDetail' experiment.pk %}">{{experiment.name}}</a></li>
                 {% endfor %}
             </ul>
+            {% endblock %}
         </body>
 </html>

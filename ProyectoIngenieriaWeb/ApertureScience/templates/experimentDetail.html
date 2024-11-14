@@ -1,9 +1,11 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>{{ experiment.name }}</title>
     </head>
     <body>
+        {% block contenido %}
         <h2>{{ experiment.name }}</h2>
         <p>Fecha de inicio: {{ experiment.startDate }}</p>
         <p>Fecha de finalización: {{ experiment.endDate }}</p>
@@ -14,7 +16,7 @@
                 <li><a href="{% url 'testSubjectDetail' testSubject.pk %}">{{ testSubject.name }} {{ testSubject.surname }}</a></li>
             {% endfor %}
         </ul>
-
+        {% endblock %}
     </body>
 
 </html>

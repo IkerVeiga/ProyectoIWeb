@@ -1,3 +1,4 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,9 +6,11 @@
     </head>
 
     <body>
+        {% block contenido %}
         <h1>Experimentos</h1>
         {%for experiment in experiments%}
             <li><a href="{% url 'experimentDetail' experiment.pk%}"> {{experiment.name}} - {{experiment.successRate}}</a></li>
         {% endfor %}
+        {% endblock %}
     </body>
 </html>

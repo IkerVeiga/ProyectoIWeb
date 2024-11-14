@@ -1,14 +1,17 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>Sujetos de prueba</title>
     </head>
     <body>
+        {% block contenido %}
         <h1>Sujetos de prueba:</h1>
         <ul>
             {% for testSubject in testSubjects %}
             <li><a href = "{% url 'testSubjectDetail' testSubject.number %}">{{ testSubject.number }} - {{ testSubject.name }} {{ testSubject.surname }}</a></li>
             {% endfor %}
         </ul>
+        {% endblock %}
     </body>
 </html>
