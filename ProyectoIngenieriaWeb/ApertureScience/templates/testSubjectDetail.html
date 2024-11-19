@@ -1,9 +1,11 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>{{ testSubject.number}} - {{ testSubject.name }} {{testSubject.surname}}</title>
     </head>
     <body>
+        {% block contenido %}
         <h2>{{ testSubject.name }} {{testSubject.surname}}</h2>
         <p>Número: {{ testSubject.number }}</p>
         <p>Fecha de nacimiento: {{testSubject.birthdate}}</p>
@@ -18,5 +20,7 @@
         <br>
         <br>
         <a href = "{% url 'index' %}">Volver al inicio</a>
+        {% endblock %}
+
     </body>    
 </html>
