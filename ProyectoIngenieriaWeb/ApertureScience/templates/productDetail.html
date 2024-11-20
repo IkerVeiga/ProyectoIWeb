@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+            {% load static %}
             {% block contenido %}
             <h2>{{product.pk}} - {{product.name}}</h2>
             <img src="{{product.image}}"></img> <!-- Falta alt y tamaño-->
             <p>Descripción: {{product.description}}</p>
-            <p>Precio: {{product.price}}$</p>
+            <p id="precio">{{product.price}}</p>
             <p>Versión: {{product.version}}</p>
             <p>Pruebas relacionadas: </p>
             <ul>
@@ -11,6 +12,8 @@
                     <li><a href="{% url 'experimentDetail' experiment.pk %}">{{experiment.name}}</a></li>
                 {% endfor %}
             </ul>
-            <br>
-            <br>
             {% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'scripts/prueba.js' %}"></script>
+{% endblock %}
