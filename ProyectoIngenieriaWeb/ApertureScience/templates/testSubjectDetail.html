@@ -1,10 +1,4 @@
 {% extends "base.html" %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>{{ testSubject.number}} - {{ testSubject.name }} {{testSubject.surname}}</title>
-    </head>
-    <body>
         {% block contenido %}
         <h2>{{ testSubject.name }} {{testSubject.surname}}</h2>
         <p>Número: {{ testSubject.number }}</p>
@@ -19,6 +13,3 @@
         <br>
         <br>
         {% endblock %}
-
-    </body>    
-</html>
