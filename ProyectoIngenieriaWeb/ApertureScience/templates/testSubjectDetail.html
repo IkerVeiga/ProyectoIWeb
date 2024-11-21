@@ -7,6 +7,7 @@
     <body>
         {% block contenido %}
         <h2>{{ testSubject.name }} {{testSubject.surname}}</h2>
+        <img src="{{testSubject.image}}" alt="{{testSubject.name}}"></img>
         <p>Número: {{ testSubject.number }}</p>
         <p>Fecha de nacimiento: {{testSubject.birthdate}}</p>
         <p>Lugar de nacimiento: {{testSubject.birthplace}}</p>
