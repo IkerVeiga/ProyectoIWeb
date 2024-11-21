@@ -97,7 +97,53 @@
             "price" : 5000000.99,
             "version" : "2.5" 
         }
+    },
+
+
+
+    {
+        "model" : "ApertureScience.Experiment",
+        "pk" : 1,
+        "fields" : {
+            "name" : "Proyect Borealis",
+            "description" : "The Borealis is a research vessel that was owned by Aperture Science. It was used in the dry-dock at Aperture Science Enrichment Center, and was the subject of a search by the Combine.",
+            "successRate" : 0,
+            "testSubjects" : [1, 5],
+            "products" : 3
+        }
+    },
+    {
+        "model" : "ApertureScience.Experiment",
+        "pk" : 2,
+        "fields" : {
+            "name" : "Companion cube chamber",
+            "description" : "Traverse this test chamber with your loyal Companion Cube",
+            "successRate" : 0.789,
+            "testSubjects" : [1, 2],
+            "products" : 3
+        }
+    },
+    {
+        "model" : "ApertureScience.Experiment",
+        "pk" : 3,
+        "fields" : {
+            "name" : "The part where he kills us",
+            "description" : "This is the part where I kill you",
+            "successRate" : 0.0,
+            "testSubjects" : [1],
+            "products" : 5
+        }
+    },
+    {
+        "model" : "ApertureScience.Experiment",
+        "pk" : 4,
+        "fields" : {
+            "name" : "Turret test chamber",
+            "description" : "Be careful to not to be shot",
+            "successRate" : 0.84,
+            "testSubjects" : [3, 4],
+            "products" : 4
+        }
     }
-    
 
 ]

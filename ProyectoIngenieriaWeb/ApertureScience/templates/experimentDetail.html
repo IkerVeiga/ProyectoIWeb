@@ -4,6 +4,7 @@
         <img src="{{ experiment.image }}" alt="{{ experiment.name }}"></img>
         <p>Descripción: {{ experiment.description }}</p>
         <p>Porcentaje de éxito: {{ successPercentaje }}%</p>
+        <p>Producto: {{ experiment.products }}</p> <!-- Esto tiene que ser un link -->
         <p>Participantes:</p>
         <ul>
             {% for testSubject in experiment.testSubjects.all %}
