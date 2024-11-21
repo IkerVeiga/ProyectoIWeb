@@ -295,27 +295,34 @@ table tr td
   border-top: 1px solid #FFF;}
 
 #sujetoPrueba{
-  width: 23%;
+  border: 3px solid #1293EE;
+  border-radius: 3px;
+  width: 200px;
   text-align: center;
   display: inline-block;
-  margin-bottom: 10%;
+  margin-bottom: 10px;
 }
 
 #contenedorImagenSujeto{
-  width: 40%;
+  width: 200px;
   display: inline-block;
   margin: 0 auto;
   text-align: center;
 }
 
 #descripcionSujeto{
-  width: 60%;
+  border-top: 3px solid #1293EE;
+  background-color: #1293EE;
+  width: 200px;
   text-align: center;
   margin: 0 auto;
+  padding-bottom: 2px;
+  padding-top: 2px;
 }
 
 #imagenSujeto{
-  width: 100%;
+  width: 150px;
+  height: 250px;
   text-align: center;
   margin: 0 auto;
   display: inline-block;
@@ -328,7 +335,53 @@ table tr td
 #linkSujeto{
   text-align: center;
   text-decoration: none;
-  color: black;
-  font-size: 135%;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#producto{
+  border: 3px solid #1293EE;
+  border-radius: 3px;
+  width: 200px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+#contenedorImagenProducto{
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#descripcionProducto{
+  border-top: 3px solid #1293EE;
+  background-color: #1293EE;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+#imagenProducto{
+  width: 150px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#productos{
+  text-align: center;
+}
+
+#linkProducto{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
   font-weight: bold;
 }
