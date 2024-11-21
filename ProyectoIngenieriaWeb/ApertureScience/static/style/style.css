@@ -293,3 +293,17 @@ table tr td
 { background: #F0EFE2;
   color: #47433F;
   border-top: 1px solid #FFF;}
+
+.divisa{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.divisa h3{
+  margin-right: 1%;
+}
+
+h3{
+  font: normal 150% 'century gothic', arial, sans-serif;
+}

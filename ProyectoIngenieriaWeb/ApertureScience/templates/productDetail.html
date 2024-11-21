@@ -1,6 +1,6 @@
 {% extends "base.html" %}
             {% load static %}
-            {% block contenido %}
+            {% block contenido %}             
             <h2>{{product.pk}} - {{product.name}}</h2>
             <img src="{{product.image}}"></img> <!-- Falta alt y tamaño-->
             <p>Descripción: {{product.description}}</p>
@@ -12,6 +12,19 @@
                     <li><a href="{% url 'experimentDetail' experiment.pk %}">{{experiment.name}}</a></li>
                 {% endfor %}
             </ul>
+            <div class="divisa">
+                <h3>Divisa:</h3>
+                <select id="coin" name="groups"> Select
+                    <optgroup>
+                        <option>EUR</option>
+                        <option selected>USD</option>
+                        <option>GBP</option>
+                        <option>AUD</option>
+                        <option>CAD</option>
+                        <option>CHF</option>
+                    </optgroup>
+                </select> 
+            </div> 
             {% endblock %}
 
 {% block scripts %}
