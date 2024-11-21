@@ -8,6 +8,7 @@ class TestSubject(models.Model):
     surname = models.CharField(max_length=50, blank=True)
     birthdate = models.DateField()
     birthplace = models.CharField(max_length=100)
+    image = models.URLField(max_length=600, null=True, blank=True)
 
     def __str__(self):
         return str(self.number) + " - " + self.name + " " + self.surname

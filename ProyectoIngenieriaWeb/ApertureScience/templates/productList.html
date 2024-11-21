@@ -1,9 +1,16 @@
 {% extends "base.html" %}
         {% block contenido %}
         <h1>Productos</h1>
-        <ul>
+        <div id="productos">
             {% for product in products %}
-            <li><a href = "{% url 'productDetail' product.pk %}">{{product.name}}</a></li>
+            <div id="producto">
+                <div id="contenedorImagenProducto">
+                    <a href="{% url 'productDetail' product.pk %}"><img id="imagenProducto" src="{{product.image}}" alt="{{product.name}}"></a>
+                </div>
+                <div id="descripcionProducto">
+                    <a id="linkProducto" href = "{% url 'productDetail' product.pk %}">{{product.name}}</a>
+                </div>
+            </div>
             {% endfor %}
-        </ul>
+        </div>
         {% endblock %}

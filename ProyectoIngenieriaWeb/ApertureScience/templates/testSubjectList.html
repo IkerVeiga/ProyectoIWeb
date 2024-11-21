@@ -1,11 +1,18 @@
 {% extends "base.html" %}
         {% block contenido %}
         <h1>Sujetos de prueba:</h1>
-        <ul>
+        <div id="sujetos">
             {% for testSubject in testSubjects %}
-            <li><a href = "{% url 'testSubjectDetail' testSubject.number %}">{{ testSubject.number }} - {{ testSubject.name }} {{ testSubject.surname }}</a></li>
+                <div id="sujetoPrueba">
+                    <div id="contenedorImagenSujeto">
+                        <a href="{% url 'testSubjectDetail' testSubject.number %}"><img id="imagenSujeto" src="{{ testSubject.image }}" alt="{{ testSubject.name }}"></img></a>
+                    </div>
+                    <div id="descripcionSujeto">
+                        <a id="linkSujeto" href = "{% url 'testSubjectDetail' testSubject.number %}">{{ testSubject.number }} - {{ testSubject.name }} {{ testSubject.surname }}</a>
+                    </div>
+                </div>
             {% endfor %}
-        </ul>
+        </div>
         <br>
         <br>
         {% endblock %}
