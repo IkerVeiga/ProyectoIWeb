@@ -12,6 +12,7 @@ function convert(quantity, toDivise) {
         let data = json.data;
         let divise = Object.keys(data)[0];
         let convertedPrice = quantity * data[divise];
+        convertedPrince = Math.round(convertedPrice * 100) / 100;
         precioDiv.innerHTML = pricePrefix + convertedPrice + " " + divise;
     });
 }
