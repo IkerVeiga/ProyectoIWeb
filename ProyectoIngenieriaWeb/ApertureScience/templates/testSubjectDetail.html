@@ -1,10 +1,4 @@
 {% extends "base.html" %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>{{ testSubject.number}} - {{ testSubject.name }} {{testSubject.surname}}</title>
-    </head>
-    <body>
         {% block contenido %}
         <h2>{{ testSubject.name }} {{testSubject.surname}}</h2>
         <img src="{{testSubject.image}}" alt="{{testSubject.name}}"></img>
@@ -20,6 +14,3 @@
         <br>
         <br>
         {% endblock %}
-
-    </body>    
-</html>
