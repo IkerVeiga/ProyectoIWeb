@@ -1,0 +1,103 @@
+[
+    {
+        "model" : "ApertureScience.TestSubject",
+        "fields" : {
+            "number" : 1,
+            "name" : "Chell",
+            "surname" : "Chell",
+            "birthdate" : "1989-09-16",
+            "birthplace" : "Londres"
+        }
+    },
+    {
+        "model" : "ApertureScience.TestSubject",
+        "fields" : {
+            "number" : 2,
+            "name" : "Mel",
+            "surname" : "Mel",
+            "birthdate" : "1990-02-22",
+            "birthplace" : "New York"
+        }
+    },
+    {
+        "model" : "ApertureScience.TestSubject",
+        "fields" : {
+            "number" : 3,
+            "name" : "Atlas",
+            "birthdate" : "2053-4-1",
+            "birthplace" : "Who knows?"
+        }
+    },
+    {
+        "model" : "ApertureScience.TestSubject",
+        "fields" : {
+            "number" : 4,
+            "name" : "P-Body",
+            "birthdate" : "2053-4-1",
+            "birthplace" : "Who knows?"
+        }
+    },
+    {
+        "model" : "ApertureScience.TestSubject",
+        "fields" : {
+            "number" : 5,
+            "name" : "Gordon",
+            "surname" : "Freeman",
+            "birthdate" : "1982-03-07",
+            "birthplace" : "Seattle"
+        }
+    },
+
+    {
+        "model" : "ApertureScience.Product",
+        "pk" : 1,
+        "fields" : {
+            "name" : "Aperture Science Handheld Portal Device",
+            "description" : "Also knwon as the portal gun, is an experimental tool used to create two portals through which objects can pass.",
+            "price" : 212341234.5,
+            "version" : "3.4" 
+        }
+    },
+    {
+        "model" : "ApertureScience.Product",
+        "pk" : 2,
+        "fields" : {
+            "name" : "Weighted Companion Cube",
+            "description" : "The Enrichment Center reminds you that the Weighted Companion Cube will never threaten to stab you and, in fact, cannot speak. In the event that the Weighted Companion Cube does speak, the Enrichment Center urges you to disregard its advice.",
+            "price" : 100000000000000000000000,
+            "version" : "1.0" 
+        }
+    },
+    {
+        "model" : "ApertureScience.Product",
+        "pk" : 3,
+        "fields" : {
+            "name" : "Genetic Lifeform and Disk Operating System",
+            "description" : "Okay. Look. We both said a lot of things that you're going to regret. But I think we can put our differences behind us. For science. You monster.",
+            "price" : 7777777777.77,
+            "version" : "48.9" 
+        }
+    },
+    {
+        "model" : "ApertureScience.Product",
+        "pk" : 4,
+        "fields" : {
+            "name" : "Aperture Science Sentry Turret",
+            "description" : "The Aperture Science Sentry Turret, or simply known as Sentries or Turrets, is a Personality Construct-based gun platform used throughout the Aperture Science Enrichment Center.",
+            "price" : 1000,
+            "version" : "3.7" 
+        }
+    },
+    {
+        "model" : "ApertureScience.Product",
+        "pk" : 5,
+        "fields" : {
+            "name" : "Aperture Science Personality Construct",
+            "description" : "Aperture Science Personality Constructs, also known as Personality Cores or Personality Spheres, are artificial intelligences developed by Aperture Science. They are housed within spherical casings and have handles for ease of transport by humans, and are used for a wide range of purposes in the Enrichment Center. Alongside the Nanobots, they are the backbones of the facility.",
+            "price" : 5000000.99,
+            "version" : "2.5" 
+        }
+    }
+    
+
+]
