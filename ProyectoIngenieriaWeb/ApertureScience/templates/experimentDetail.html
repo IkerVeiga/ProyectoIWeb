@@ -1,7 +1,7 @@
 {% extends "base.html" %}
         {% block contenido %}
         <h2>{{ experiment.name }}</h2>
-        <img src="{{ experiment.image }}" alt="Foto de la cámara de pruebas"></img>
+        <img src="{{ experiment.image }}" alt="{{ experiment.name }}"></img>
         <p>Descripción: {{ experiment.description }}</p>
         <p>Porcentaje de éxito: {{ successPercentaje }}%</p>
         <p>Participantes:</p>

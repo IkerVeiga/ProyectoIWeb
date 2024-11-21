@@ -307,3 +307,42 @@ table tr td
 h3{
   font: normal 150% 'century gothic', arial, sans-serif;
 }
+
+#sujetoPrueba{
+  width: 23%;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 10%;
+}
+
+#contenedorImagenSujeto{
+  width: 40%;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#descripcionSujeto{
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#imagenSujeto{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#sujetos{
+  text-align: center;
+}
+
+#linkSujeto{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 135%;
+  font-weight: bold;
+}

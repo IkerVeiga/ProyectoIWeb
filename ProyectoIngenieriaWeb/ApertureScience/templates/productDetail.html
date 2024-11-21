@@ -2,7 +2,7 @@
             {% load static %}
             {% block contenido %}             
             <h2>{{product.pk}} - {{product.name}}</h2>
-            <img src="{{product.image}}"></img> <!-- Falta alt y tamaño-->
+            <img src="{{product.image}}" alt="{{product.name}}"></img>
             <p>Descripción: {{product.description}}</p>
             <p id="precio">{{product.price}}</p>
             <p>Versión: {{product.version}}</p>
