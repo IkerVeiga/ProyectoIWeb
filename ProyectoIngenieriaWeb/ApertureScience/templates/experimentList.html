@@ -1,9 +1,16 @@
 {% extends "base.html" %}
         {% block contenido %}
         <h1>Pruebas</h1>
-        {%for experiment in experiments%}
-            <li><a href="{% url 'experimentDetail' experiment.pk%}"> {{experiment.name}}</a></li>
-        {% endfor %}
-        <br>
-        <br>
+        <div id="pruebas">
+            {% for experiment in experiments %}
+            <div class="prueba">
+                <div class="contenedorImagenPrueba">
+                    <a href="{% url 'experimentDetail' experiment.pk %}"><img class="imagenPrueba" src="{{experiment.image}}" alt="{{experiment.name}}"></a>
+                </div>
+                <div class="descripcionPrueba">
+                    <a class="linkPrueba" href="{% url 'experimentDetail' experiment.pk %}">{{experiment.name}}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
         {% endblock %}

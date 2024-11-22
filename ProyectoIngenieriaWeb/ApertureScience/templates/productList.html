@@ -3,12 +3,12 @@
         <h1>Productos</h1>
         <div id="productos">
             {% for product in products %}
-            <div id="producto">
-                <div id="contenedorImagenProducto">
-                    <a href="{% url 'productDetail' product.pk %}"><img id="imagenProducto" src="{{product.image}}" alt="{{product.name}}"></a>
+            <div class="producto">
+                <div class="contenedorImagenProducto">
+                    <a href="{% url 'productDetail' product.pk %}"><img class="imagenProducto" src="{{product.image}}" alt="{{product.name}}"></a>
                 </div>
-                <div id="descripcionProducto">
-                    <a id="linkProducto" href = "{% url 'productDetail' product.pk %}">{{product.name}}</a>
+                <div class="descripcionProducto">
+                    <a class="linkProducto" href = "{% url 'productDetail' product.pk %}">{{product.name}}</a>
                 </div>
             </div>
             {% endfor %}
