@@ -399,3 +399,24 @@ h3{
   font-size: 15px;
   font-weight: bold;
 }
+/*Modificaciones de Sujeto de prueba detail*/
+#sujetoPruebaDiv{
+
+}
+
+#nombreSujDiv{
+
+}
+
+#infoSujeto{
+  display: flex;
+}
+
+#imgSujDiv{
+  width: 30%;
+}
+
+#imgSujDiv, img{
+  max-width: 100%;
+}
+
