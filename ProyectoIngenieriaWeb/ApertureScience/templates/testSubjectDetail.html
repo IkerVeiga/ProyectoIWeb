@@ -1,16 +1,50 @@
 {% extends "base.html" %}
-        {% block contenido %}
-        <h2>{{ testSubject.name }} {{testSubject.surname}}</h2>
-        <img src="{{testSubject.image}}" alt="{{testSubject.name}}"></img>
-        <p>Número: {{ testSubject.number }}</p>
-        <p>Fecha de nacimiento: {{testSubject.birthdate}}</p>
-        <p>Lugar de nacimiento: {{testSubject.birthplace}}</p>
-        <p>Formó parte en las siguientes pruebas:</p>
-        <ul>
-            {% for experiment in testSubject.experiments.all %}
-                <li><a href="{% url 'experimentDetail' experiment.pk %}">{{ experiment.name }}</a></li>
-            {% endfor %}
-        </ul>
-        <br>
-        <br>
-        {% endblock %}
+    {% block contenido %}
+        <div id="sujetoPruebaDiv">
+            <div id="nombreSujDiv">
+                <h2>{{ testSubject.name }} {{testSubject.surname}}</h2>
+            </div>
+            
+
+
+            <div id="infoSujeto">
+                <div id="imgSujDiv">
+                    <img id="imgSuj" src="{{testSubject.image}}" alt="{{testSubject.name}}"></img>
+                </div>
+
+                <div>
+                    <div id="datosSujDiv">
+                        <table id="datosSuj">
+                            
+                            <tr>
+                                <th>Número</th>
+                                <td>{{ testSubject.number }}</td>
+                            </tr>
+                            <tr>                        
+                                <th>Fecha de nacimiento</th>
+                                <td> {{testSubject.birthdate}}</td>     
+                            </tr>
+                            <tr>
+                                <th>Lugar de nacimiento:</th>
+                                <td>{{testSubject.birthplace}}</td>
+                            </tr>                
+                        </table>
+                    </div>
+                    <div id="pruebasSujDiv">
+                        <ul>
+                            {% for experiment in testSubject.experiments.all %}
+                                <li><a href="{% url 'experimentDetail' experiment.pk %}">{{ experiment.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                 
+            </div>
+           
+            
+            <br>
+            <br>
+        </div>
+    {% endblock %}
