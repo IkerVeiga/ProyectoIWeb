@@ -1,0 +1,37 @@
+/*Modificaciones de Sujeto de prueba detail*/
+#sujetoPruebaDiv{
+
+}
+
+#nombreSujDiv{
+
+}
+
+#infoSujeto{
+  display: flex;
+}
+
+#imgSujDiv{
+  width: 30%;
+}
+
+#imgSujDiv, img{
+  max-width: 100%;
+}
+
+#dataDiv{
+    width: 55%;
+}
+
+#datosSuj{
+    width: 100%;
+}
+
+#datosSuj td{
+    width: 50%;
+}
+
+#datosSuj a{
+    color: #1293EE;
+}
+
