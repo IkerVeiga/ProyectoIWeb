@@ -1,4 +1,4 @@
-const pricePrefix = "Precio: ";
+const pricePrefix = "";
 
 const API = {
     key : "fca_live_BYOK83s2qtf3Lf99SGERrqdon4AlnsNaq9b7wF76",
@@ -13,7 +13,7 @@ function convert(quantity, toDivise) {
         let divise = Object.keys(data)[0];
         let convertedPrice = quantity * data[divise];
         convertedPrince = Math.round(convertedPrice * 100) / 100;
-        precioDiv.innerHTML = pricePrefix + convertedPrice + " " + divise;
+        precioDiv.innerHTML = convertedPrice + " " + divise;
     });
 }
 
@@ -34,4 +34,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-precioDiv.innerHTML = pricePrefix + precio + " USD";
+precioDiv.innerHTML = precio + " USD";

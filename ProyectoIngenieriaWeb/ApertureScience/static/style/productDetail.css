@@ -1,0 +1,34 @@
+#contentDiv{
+    display: flex;
+}
+
+#imgProductoDiv{
+    max-width: 33%;
+    margin: 10px;
+    
+}
+
+#imgProductoDiv img{
+    width: 100%;
+}
+
+
+
+#datosProductoDiv{
+    width: 55%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+#datosProductoDiv table{
+    width: 100%;
+
+}
+
+#datosProductoDiv th{
+    width: 30%;
+}
+
+#datosProductoDiv a{
+    color: #1293EE;
+}
