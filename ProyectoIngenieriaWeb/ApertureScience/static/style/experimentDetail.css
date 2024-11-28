@@ -1,0 +1,34 @@
+#contentDiv{
+    display: flex;
+}
+
+#imgPruebaDiv{
+    max-width: 33%;
+    margin: 10px;
+    
+}
+
+#imgPruebaDiv img{
+    width: 100%;
+}
+
+
+
+#datosPruebaDiv{
+    width: 55%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+#datosPruebaDiv table{
+    width: 100%;
+
+}
+
+#datosPruebaDiv th{
+    width: 30%;
+}
+
+#datosPruebaDiv a{
+    color: #1293EE;
+}
