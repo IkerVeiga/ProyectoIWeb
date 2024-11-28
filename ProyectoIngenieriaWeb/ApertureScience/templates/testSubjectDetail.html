@@ -34,7 +34,7 @@
                                 <td>{{testSubject.birthplace}}</td>
                             </tr>
                             <tr>
-                                <th>Purebas</th>
+                                <th>Pruebas</th>
                                 <td>
                                     {% for experiment in testSubject.experiments.all %}
                                     <li><a href="{% url 'experimentDetail' experiment.pk %}">{{ experiment.name }}</a></li>
