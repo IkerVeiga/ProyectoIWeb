@@ -1,16 +1,56 @@
 {% extends "base.html" %}
+    {% load static %}
+    {% block head %}
+        <link rel="stylesheet" href="{% static 'style/experimentDetail.css' %}">
+    {% endblock %}
         {% block contenido %}
         <h2>{{ experiment.name }}</h2>
-        <img src="{{ experiment.image }}" alt="{{ experiment.name }}"></img>
-        <p>Descripción: {{ experiment.description }}</p>
-        <p>Porcentaje de éxito: {{ successPercentaje }}%</p>
-        <p>Producto: {{ experiment.products }}</p> <!-- Esto tiene que ser un link -->
-        <p>Participantes:</p>
-        <ul>
-            {% for testSubject in experiment.testSubjects.all %}
-                <li><a href="{% url 'testSubjectDetail' testSubject.pk %}">{{ testSubject.name }} {{ testSubject.surname }}</a></li>
-            {% endfor %}
-        </ul>
-        <br>
-        <br>
+        <div id="contentDiv">
+            <div id="imgPruebaDiv">
+                <img src="{{experiment.image}}" alt="{{experiment.name}}"></img>
+            </div>
+            <div id="datosPruebaDiv">
+                <table>
+                    <tr>
+                        <th>Descrpción</th>
+                        <td>{{experiment.description}}</td>
+                    </tr>
+                    <tr>
+                        <th>Porcentaje de éxito</th>
+                        <td>{{experiment.successRate}}</td>
+                    </tr>
+                    <tr>
+                        <th>Producto</th>
+                        <td>{{experiment.products.name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Sujetos de prueba</th>
+                        <td>
+                            {% for testSubject in experiment.testSubjects.all %}
+                                <li>
+                                    <a href="{% url 'testSubjectDetail' testSubject.pk %}">{{testSubject.name}} {{testSubject.surname}}</a>
+                                </li>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="divisa">
+            <h3>Divisa:</h3>
+            <select id="coin" name="groups"> Select
+                <optgroup>
+                    <option>EUR</option>
+                    <option selected>USD</option>
+                    <option>GBP</option>
+                    <option>AUD</option>
+                    <option>CAD</option>
+                    <option>CHF</option>
+                </optgroup>
+            </select> 
+        </div>
         {% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'scripts/cambioMoneda.js' %}"></script>
+{% endblock %}
