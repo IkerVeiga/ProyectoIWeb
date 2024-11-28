@@ -1,17 +1,39 @@
 {% extends "base.html" %}
             {% load static %}
+            {%block head%}
+                <link rel="stylesheet" href="{% static 'style/productDetail.css' %}">
+            {% endblock %}
+
             {% block contenido %}             
             <h2>{{product.pk}} - {{product.name}}</h2>
-            <img src="{{product.image}}" alt="{{product.name}}"></img>
-            <p>Descripción: {{product.description}}</p>
-            <p id="precio">{{product.price}}</p>
-            <p>Versión: {{product.version}}</p>
-            <p>Pruebas relacionadas: </p>
-            <ul>
-                {% for experiment in product.experiments.all %}
-                    <li><a href="{% url 'experimentDetail' experiment.pk %}">{{experiment.name}}</a></li>
-                {% endfor %}
-            </ul>
+            <div id="contentDiv">
+                <div id="imgProductoDiv">
+                    <img src="{{product.image}}" alt="{{product.name}}"></img>
+                </div>
+                <div id="datosProductoDiv">
+                    <table>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>{{product.description}}</td>
+                        </tr>
+                        <tr>
+                            <th>Precio</th>
+                            <td id="precio">{{product.price}}</td>
+                        </tr>
+                        <tr>
+                            <th>Versión</th>
+                            <td>{{product.version}}</td>
+                        </tr>
+                        <tr>
+                            <th>Pruebas</th>
+                            <td>{% for experiment in product.experiments.all %}
+                                <li><a href="{% url 'experimentDetail' experiment.pk %}">{{experiment.name}}</a></li>
+                                {% endfor %}</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
             <div class="divisa">
                 <h3>Divisa:</h3>
                 <select id="coin" name="groups"> Select
