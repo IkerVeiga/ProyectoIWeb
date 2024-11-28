@@ -314,7 +314,7 @@ h3{
   width: 200px;
   text-align: center;
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 10px;;
 }
 
 .contenedorImagenSujeto{
@@ -397,5 +397,11 @@ h3{
   text-decoration: none;
   color: white;
   font-size: 15px;
+  font-weight: bold;
+}
+
+#titulo{
+  font-family: verdana;
+  font-style: italic;
   font-weight: bold;
 }
