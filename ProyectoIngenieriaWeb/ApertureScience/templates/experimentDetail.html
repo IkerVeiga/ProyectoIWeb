@@ -36,21 +36,6 @@
                 </table>
             </div>
         </div>
-        <div class="divisa">
-            <h3>Divisa:</h3>
-            <select id="coin" name="groups"> Select
-                <optgroup>
-                    <option>EUR</option>
-                    <option selected>USD</option>
-                    <option>GBP</option>
-                    <option>AUD</option>
-                    <option>CAD</option>
-                    <option>CHF</option>
-                </optgroup>
-            </select> 
-        </div>
+       
         {% endblock %}
 
-{% block scripts %}
-    <script src="{% static 'scripts/cambioMoneda.js' %}"></script>
-{% endblock %}
