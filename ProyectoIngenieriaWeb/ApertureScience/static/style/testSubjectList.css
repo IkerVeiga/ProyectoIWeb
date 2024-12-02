@@ -1,4 +1,49 @@
 #menuSujetos{
-    background: #0D66A5;
-  
-  }
+    background: #0D66A5;  
+}
+
+.sujetoPrueba{
+  border: 3px solid #1293EE;
+  border-radius: 3px;
+  width: 200px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;;
+}
+
+.contenedorImagenSujeto{
+  width: 200px;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.descripcionSujeto{
+  border-top: 3px solid #1293EE;
+  background-color: #1293EE;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+.imagenSujeto{
+  width: 150px;
+  height: 250px;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#sujetos{
+  text-align: center;
+}
+
+.linkSujeto{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
