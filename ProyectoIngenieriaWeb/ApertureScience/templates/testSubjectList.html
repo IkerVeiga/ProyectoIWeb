@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
+    {% block head %}
+        <link rel="stylesheet" href="{% static 'style/testSubjectList.css' %}">
+    {% endblock %}
+
         {% block contenido %}
         <h1>Sujetos de prueba:</h1>
         <div id="sujetos">

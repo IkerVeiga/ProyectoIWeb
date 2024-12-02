@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+
+{% load static %}
+    {% block head %}
+        <link rel="stylesheet" href="{% static 'style/home.css' %}">
+    {% endblock %}
+
       {% block contenido %}
       <div class="sidebar">
         <!-- insert your sidebar items here -->

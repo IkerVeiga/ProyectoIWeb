@@ -19,10 +19,10 @@
               <div id="menubar">
                 <ul id="menu">
                   <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-                  <li class="selected"><a href="{% url 'index' %}">Home</a></li>
-                  <li><a href="{% url 'productsList' %}">Productos</a></li>
-                  <li><a href="{% url 'testSubjectsList' %}">Sujetos de prueba</a></li>
-                  <li><a href="{% url 'experimentList' %}">Pruebas</a></li>
+                  <li id="menuHome"><a href="{% url 'index' %}">Home</a></li>
+                  <li id="menuProductos"><a href="{% url 'productsList' %}">Productos</a></li>
+                  <li id="menuSujetos"><a href="{% url 'testSubjectsList' %}">Sujetos de prueba</a></li>
+                  <li id="menuPruebas"><a href="{% url 'experimentList' %}">Pruebas</a></li>
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
