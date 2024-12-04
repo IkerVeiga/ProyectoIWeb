@@ -8,28 +8,25 @@
       {% block contenido %}
       <div class="sidebar">
         <!-- insert your sidebar items here -->
-        <h3>Latest News</h3>
-        <h4>New Website Launched</h4>
-        <h5>August 1st, 2013</h5>
-        <p>2013 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+        <h3>Últimas noticias</h3>
+        <h4>Nuevo Producto</h4>
+        <h5>9 de diciembre de 2024</h5>
+        <div id="nuevoProducto">
+          <div id="divImagenTorreta">
+            <img id="imagenTorreta" src="../static/style/SentryTurret.png" alt="Sentry Turret">
+          </div>
+          <div id="divNombreTorreta">            
+            <p id="nombreTorreta">Sentry Turret</p>
+          </div>
+        </div>
         <p></p>
-        <h4>New Website Launched</h4>
-        <h5>August 1st, 2013</h5>
-        <p>2013 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
-        <h3>Useful Links</h3>
-        <ul>
-          <li><a href="#">link 1</a></li>
-          <li><a href="#">link 2</a></li>
-          <li><a href="#">link 3</a></li>
-          <li><a href="#">link 4</a></li>
-        </ul>
-        <h3>Search</h3>
-        <form method="post" action="#" id="search_form">
-          <p>
-            <input class="search" type="text" name="search_field" value="Enter keywords....." />
-            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
-          </p>
-        </form>
+        <h4>La IA se apodera de Aperture Science</h4>
+        <h5>10 de diciembre de 2024</h5>
+        <p>Una Inteligencia Artficial programada en un nucleo de personalidad
+          conocida como Wheatley ha tomado el control de las instalaciones 
+          de Aperture Science y ha empezado a realizar experimentos con distintos
+          sujetos de prueba.
+        </p>
       </div>
       
       <div id="content">
@@ -39,9 +36,7 @@
           el desarrollo de tecnologías avanzadas y soluciones científicas aplicadas a los problemas 
           más complejos del universo. Desde su fundación, la empresa ha revolucionado la ciencia con 
           productos únicos, diseñados tanto para investigación avanzada como para innovación en el 
-          campo del entretenimiento científico. Entre nuestros productos más destacados se encuentran
-          la pistola de portales, el cubo de compañía, GLaDOS, los geles de propulsión y de repulsión 
-          y las torretas autónomas.
+          campo del entretenimiento científico.
         </p>
         <p>En Aperture Science, cada producto es una prueba de nuestra misión de desafiar los límites 
           de la ciencia y llevar la innovación a lugares inimaginables. "No preguntes por qué, pregunta 
@@ -49,14 +44,16 @@
           instalaciones el lugar perfecto para que la ciencia y la curiosidad se encuentren en un solo destino.
         </p>
 
-        <h2>Browser Compatibility</h2>
-        <p>This template has been tested in the following browsers:</p>
+        <h1>Preguntas frecuentes</h1>
         <ul>
-          <li>Internet Explorer 8</li>
-          <li>Internet Explorer 7</li>
-          <li>FireFox 3.5</li>
-          <li>Google Chrome 6</li>
+          <li class="faq">¿Qué debo hacer si encuentro un problema con la prueba?</li>
+          <p>Si encuentras un problema, por favor repórtalo a GLaDOS. Ella seguramente lo resolverá... o te culpará de forma pasivo-agresiva. Ambas son respuestas válidas.</p>
+          <li class="faq">¿La tarta es real?</li>
+          <p>Sí, por supuesto. Está reservado para los sujetos de prueba que completen con éxito todas las cámaras. Cualquier afirmación de lo contrario es una prueba más.</p>
+          <li class="faq">¿Es seguro trabajar en Aperture Science?</li>
+          <p>Absolutamente. Según nuestras métricas internas, más del 70% de los empleados sobrevivieron a los experimentos del último trimestre. ¡Ven preparado para aprender y crecer!</p>
         </ul>
+
       </div>
       {% endblock %}
 

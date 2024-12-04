@@ -1,4 +1,49 @@
 #menuHome{
-    background: #0D66A5;
-  
-  }
+    background: #0D66A5;  
+}
+
+#nuevoProducto{
+  border: 2px solid black;
+  width: 200px;
+  height: 235px;
+  border-radius: 5px;
+  border-color: #1293EE;
+  margin-bottom: 20px;
+}
+
+#divImagenTorreta{
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#imagenTorreta{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#divNombreTorreta{
+  border-top: 3px solid #1293EE;
+  background-color: #1293EE;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  height: 30px;
+}
+
+#nombreTorreta{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.faq{
+  font-weight: bold;
+  color: black;
+}
