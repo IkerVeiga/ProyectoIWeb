@@ -119,7 +119,7 @@
             "description" : "The Borealis is a research vessel that was owned by Aperture Science. It was used in the dry-dock at Aperture Science Enrichment Center, and was the subject of a search by the Combine.",
             "successRate" : 0,
             "testSubjects" : [1, 5],
-            "products" : 3,
+            "product" : 3,
             "image" : "https://static.wikia.nocookie.net/halflife7283/images/0/00/Borealis_Ep2.jpg/revision/latest?cb=20150626141056&path-prefix=es"
         }
     },
@@ -131,7 +131,7 @@
             "description" : "Traverse this test chamber with your loyal Companion Cube",
             "successRate" : 0.789,
             "testSubjects" : [1, 2],
-            "products" : 3,
+            "product" : 3,
             "image" : "https://www.thonky.com/portal-walkthrough/_IMG/test-chamber-17.jpg?w=1200&r=4x3"
         }
     },
@@ -143,7 +143,7 @@
             "description" : "This is the part where I kill you",
             "successRate" : 0.0,
             "testSubjects" : [1],
-            "products" : 5,
+            "product" : 5,
             "image" : "https://i.redd.it/mqf7ccvy1by71.png"
         }
     },
@@ -155,7 +155,7 @@
             "description" : "This next test involves turrets. You remember them, right? They're the pale, spherical things that are full of bullets. Oh wait, that's you in five seconds. Good luck.",
             "successRate" : 0.84,
             "testSubjects" : [3, 4],
-            "products" : 4,
+            "product" : 4,
             "image" : "https://static.wikia.nocookie.net/half-life/images/9/99/Turret_opera3.jpg/revision/latest/scale-to-width-down/1200?cb=20110501232819&path-prefix=en"
         }
     }
