@@ -22,7 +22,7 @@
                     </tr>
                     <tr>
                         <th>Producto</th>
-                        <td>{{experiment.products.name}}</td>
+                        <td><a href="{% url 'productDetail' experiment.product.pk %}">{{experiment.product.name}}</a></td>
                     </tr>
                     <tr>
                         <th>Sujetos de prueba</th>

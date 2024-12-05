@@ -31,7 +31,7 @@ class Experiment(models.Model):
 
     testSubjects = models.ManyToManyField(TestSubject,  related_name="experiments")
     #Cambiar la products por product porque solo hay un producto por experimento
-    products = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="experiments")
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="experiments")
 
     def __str__(self):
         return str(self.id) +" - "+ self.name
