@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-
 {% load static %}
+
     {% block head %}
         <link rel="stylesheet" href="{% static 'style/home.css' %}">
         <title>Home</title>
@@ -14,7 +14,7 @@
         <h5>9 de diciembre de 2024</h5>
         <div id="nuevoProducto">
           <div id="divImagenTorreta">
-            <img id="imagenTorreta" src="../static/style/SentryTurret.png" alt="Sentry Turret">
+            <img id="imagenTorreta" src="{% static 'style/SentryTurret.png'}" alt="Sentry Turret">
           </div>
           <div id="divNombreTorreta">            
             <p id="nombreTorreta">Sentry Turret</p>

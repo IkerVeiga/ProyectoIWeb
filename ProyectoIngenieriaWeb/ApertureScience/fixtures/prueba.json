@@ -6,7 +6,8 @@
             "name" : "Chell",
             "surname" : "Chell",
             "birthdate" : "1989-09-16",
-            "birthplace" : "Londres"
+            "birthplace" : "Londres",
+            "image" : "https://upload.wikimedia.org/wikipedia/en/4/40/Chell.png"
         }
     },
     {
@@ -16,7 +17,8 @@
             "name" : "Mel",
             "surname" : "Mel",
             "birthdate" : "1990-02-22",
-            "birthplace" : "New York"
+            "birthplace" : "New York",
+            "image" : "https://static.wikia.nocookie.net/halflife7283/images/c/c9/Mel_model.jpg/revision/latest?cb=20160304225916&path-prefix=es"
         }
     },
     {
@@ -25,7 +27,8 @@
             "number" : 3,
             "name" : "Atlas",
             "birthdate" : "2053-4-1",
-            "birthplace" : "Who knows?"
+            "birthplace" : "Who knows?",
+            "image" : "https://static.wikia.nocookie.net/robotics/images/3/39/Atlas_%28Portal_2%29.png/revision/latest?cb=20240616101014"
         }
     },
     {
@@ -34,7 +37,8 @@
             "number" : 4,
             "name" : "P-Body",
             "birthdate" : "2053-4-1",
-            "birthplace" : "Who knows?"
+            "birthplace" : "Who knows?",
+            "image" : "https://static.wikia.nocookie.net/half-life/images/2/2c/P-body_model.jpg/revision/latest/scale-to-width-down/238?cb=20110516170353&path-prefix=en"
         }
     },
     {
@@ -44,7 +48,8 @@
             "name" : "Gordon",
             "surname" : "Freeman",
             "birthdate" : "1982-03-07",
-            "birthplace" : "Seattle"
+            "birthplace" : "Seattle",
+            "image" : "https://preview.redd.it/ysiz7ye9fd091.jpg?width=640&crop=smart&auto=webp&s=cbfd1b838cacf7301a022a804615e54391d3ac46"
         }
     },
 
@@ -55,7 +60,8 @@
             "name" : "Aperture Science Handheld Portal Device",
             "description" : "Also knwon as the portal gun, is an experimental tool used to create two portals through which objects can pass.",
             "price" : 212341234.5,
-            "version" : "3.4" 
+            "version" : "3.4",
+            "image" : "https://static.wikia.nocookie.net/halflife7283/images/c/c5/Portal_Gun_w.jpg/revision/latest?cb=20141004201410&path-prefix=es"
         }
     },
     {
@@ -65,7 +71,8 @@
             "name" : "Weighted Companion Cube",
             "description" : "The Enrichment Center reminds you that the Weighted Companion Cube will never threaten to stab you and, in fact, cannot speak. In the event that the Weighted Companion Cube does speak, the Enrichment Center urges you to disregard its advice.",
             "price" : 100000000000000000000000,
-            "version" : "1.0" 
+            "version" : "1.0" ,
+            "image" : "https://i1.theportalwiki.net/img/thumb/6/6b/Portal2_CompanionCube.png/300px-Portal2_CompanionCube.png"
         }
     },
     {
@@ -75,7 +82,8 @@
             "name" : "Genetic Lifeform and Disk Operating System",
             "description" : "Okay. Look. We both said a lot of things that you're going to regret. But I think we can put our differences behind us. For science. You monster.",
             "price" : 7777777777.77,
-            "version" : "48.9" 
+            "version" : "48.9",
+            "image" : "https://i1.theportalwiki.net/img/thumb/7/79/GLaDOS_P2.png/400px-GLaDOS_P2.png" 
         }
     },
     {
@@ -85,7 +93,8 @@
             "name" : "Aperture Science Sentry Turret",
             "description" : "The Aperture Science Sentry Turret, or simply known as Sentries or Turrets, is a Personality Construct-based gun platform used throughout the Aperture Science Enrichment Center.",
             "price" : 1000,
-            "version" : "3.7" 
+            "version" : "3.7",
+            "image" : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c55c076b-9ab1-4c13-ac5b-0be17741b969/dexzcy4-f6c185c2-4d59-43cf-9fc7-77b36386a510.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2M1NWMwNzZiLTlhYjEtNGMxMy1hYzViLTBiZTE3NzQxYjk2OVwvZGV4emN5NC1mNmMxODVjMi00ZDU5LTQzY2YtOWZjNy03N2IzNjM4NmE1MTAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.CXT2AuxyXT_rte1-DLU-xCmZcYb4wmSdpTAkRyayA5I" 
         }
     },
     {
@@ -95,7 +104,8 @@
             "name" : "Aperture Science Personality Construct",
             "description" : "Aperture Science Personality Constructs, also known as Personality Cores or Personality Spheres, are artificial intelligences developed by Aperture Science. They are housed within spherical casings and have handles for ease of transport by humans, and are used for a wide range of purposes in the Enrichment Center. Alongside the Nanobots, they are the backbones of the facility.",
             "price" : 5000000.99,
-            "version" : "2.5" 
+            "version" : "2.5" ,
+            "image" : "https://static.wikia.nocookie.net/halflife7283/images/8/81/Wheatley_model.jpg/revision/latest?cb=20150903133713&path-prefix=es"
         }
     },
 
@@ -109,7 +119,8 @@
             "description" : "The Borealis is a research vessel that was owned by Aperture Science. It was used in the dry-dock at Aperture Science Enrichment Center, and was the subject of a search by the Combine.",
             "successRate" : 0,
             "testSubjects" : [1, 5],
-            "products" : 3
+            "products" : 3,
+            "image" : "https://static.wikia.nocookie.net/halflife7283/images/0/00/Borealis_Ep2.jpg/revision/latest?cb=20150626141056&path-prefix=es"
         }
     },
     {
@@ -120,7 +131,8 @@
             "description" : "Traverse this test chamber with your loyal Companion Cube",
             "successRate" : 0.789,
             "testSubjects" : [1, 2],
-            "products" : 3
+            "products" : 3,
+            "image" : "https://www.thonky.com/portal-walkthrough/_IMG/test-chamber-17.jpg?w=1200&r=4x3"
         }
     },
     {
@@ -131,7 +143,8 @@
             "description" : "This is the part where I kill you",
             "successRate" : 0.0,
             "testSubjects" : [1],
-            "products" : 5
+            "products" : 5,
+            "image" : "https://i.redd.it/mqf7ccvy1by71.png"
         }
     },
     {
@@ -139,10 +152,11 @@
         "pk" : 4,
         "fields" : {
             "name" : "Turret test chamber",
-            "description" : "Be careful to not to be shot",
+            "description" : "This next test involves turrets. You remember them, right? They're the pale, spherical things that are full of bullets. Oh wait, that's you in five seconds. Good luck.",
             "successRate" : 0.84,
             "testSubjects" : [3, 4],
-            "products" : 4
+            "products" : 4,
+            "image" : "https://static.wikia.nocookie.net/half-life/images/9/99/Turret_opera3.jpg/revision/latest/scale-to-width-down/1200?cb=20110501232819&path-prefix=en"
         }
     }
 
