@@ -65,3 +65,16 @@ class TestSubjectDetail(DetailView):
     model = TestSubject
     template_name = 'testSubjectDetail.html'
     context_object_name = 'testSubject'
+
+def newPost(request):
+    if (request.method == "POST"):
+        #print(request.POST["name"])
+        from django.utils import timezone
+        post = Post(creatorName = request.POST["name"], title = request.POST["title"], message = request.POST["message"], publicationDate = timezone.now())
+        post.save()
+        context = {'post': post}
+        return render(request, "post.html", context)
+    if (request.method == "GET"):
+        context = {'posts' : Post.objects.all().order_by('publicationDate')}
+        # print(Post.objects.all()[1].date)
+        return render(request, "posts.html", context)

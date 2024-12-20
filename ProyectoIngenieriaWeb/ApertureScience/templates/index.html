@@ -3,6 +3,7 @@
 {% load static %}
     {% block head %}
         <link rel="stylesheet" href="{% static 'style/home.css' %}">
+        <script src="https://unpkg.com/htmx.org@2.0.4"></script>
     {% endblock %}
 
       {% block contenido %}
@@ -54,6 +55,28 @@
           <p>Absolutamente. Según nuestras métricas internas, más del 70% de los empleados sobrevivieron a los experimentos del último trimestre. ¡Ven preparado para aprender y crecer!</p>
         </ul>
 
+        <div id="foro" class="form_settings">
+          <h1>Foro</h1>
+          <div hx-get="{% url 'posts' %}" hx-swap="outherHTML" hx-trigger="load"></div>
+          <form hx-post="{% url 'posts' %}" hx-swap="beforebegin">
+            {% csrf_token %}
+            <div>
+              <label for = "name">Nombre:</label>
+              <input type="text" name="name" id="name">
+            </div>
+            <div>
+              <label for="title">Título del post:</label>
+              <input type="text" name="title" id="title">
+            </div>
+            <div>
+              <label for="message">Contenido:</label>
+              <input type="text" name="message" id="message">
+            </div>
+            <button class="submit" type="submit">Nuevo post</button>
+          </form>
+        </div>
+
       </div>
+      
       {% endblock %}
 

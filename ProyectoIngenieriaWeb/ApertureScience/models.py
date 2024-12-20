@@ -35,3 +35,12 @@ class Experiment(models.Model):
 
     def __str__(self):
         return str(self.id) +" - "+ self.name
+    
+class Post(models.Model):
+    creatorName = models.CharField(max_length=50)
+    title = models.CharField(max_length=50)
+    message = models.TextField()
+    publicationDate = models.DateTimeField()
+
+    def __str__(self):
+        return self.title

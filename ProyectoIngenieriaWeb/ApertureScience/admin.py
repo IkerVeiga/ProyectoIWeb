@@ -4,5 +4,6 @@ from .models import *
 admin.site.register(TestSubject)
 admin.site.register(Product)
 admin.site.register(Experiment)
+admin.site.register(Post)
 
 
