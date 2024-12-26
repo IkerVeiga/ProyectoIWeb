@@ -58,19 +58,20 @@
         <div id="foro" class="form_settings">
           <h1>Foro</h1>
           <div hx-get="{% url 'posts' %}" hx-swap="outherHTML" hx-trigger="load"></div>
+          </div>
           <form hx-post="{% url 'posts' %}" hx-swap="beforebegin">
             {% csrf_token %}
-            <div>
+            <div class="formDiv">
               <label for = "name">Nombre:</label>
-              <input type="text" name="name" id="name">
+              <div class="aling"><input type="text" name="name" id="name"></div>
             </div>
-            <div>
+            <div class="formDiv">
               <label for="title">Título del post:</label>
-              <input type="text" name="title" id="title">
+              <div class="aling"><input type="text" name="title" id="title"></div>
             </div>
-            <div>
+            <div class="formDiv">
               <label for="message">Contenido:</label>
-              <input type="text" name="message" id="message">
+              <div class="aling"><textarea name="message" id="message" rows="5" coluumns="50"></textarea></div>
             </div>
             <button class="submit" type="submit">Nuevo post</button>
           </form>

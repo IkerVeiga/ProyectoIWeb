@@ -47,3 +47,28 @@
   font-weight: bold;
   color: black;
 }
+
+.formDiv {
+  margin: 1em;
+}
+
+.formDiv label {
+  display: inline-block;
+  width: 20%;
+}
+
+.aling {
+  display: inline-flex;
+  align-items: left;
+  justify-content: left;
+  width: 70%;
+}
+
+.aling input, .aling textarea{
+  width: 100%;
+}
+
+#message {
+  height: 10em;
+  width: 30em;
+}

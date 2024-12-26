@@ -1,7 +1,7 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, StreamingHttpResponse
 from django.shortcuts import render
 from .models import *
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, View
 
 # Create your views here.
 
@@ -66,15 +66,45 @@ class TestSubjectDetail(DetailView):
     template_name = 'testSubjectDetail.html'
     context_object_name = 'testSubject'
 
-def newPost(request):
-    if (request.method == "POST"):
-        #print(request.POST["name"])
+# def newPost(request):
+#     if (request.method == "POST"):
+#         #print(request.POST["name"])
+#         from django.utils import timezone
+#         post = Post(creatorName = request.POST["name"], title = request.POST["title"], message = request.POST["message"], publicationDate = timezone.now())
+#         post.save()
+#         context = {'post': post}
+#         return render(request, "post.html", context)
+#     if (request.method == "GET"):
+#         context = {'posts' : Post.objects.all().order_by('publicationDate')}
+#         # print(Post.objects.all()[1].date)
+#         return render(request, "posts.html", context)
+
+class post(View):
+    def get(self, request):
+        context = {'posts' : Post.objects.all().order_by('publicationDate')}
+        return render(request, "posts.html", context)
+
+    def post(self, request):
         from django.utils import timezone
         post = Post(creatorName = request.POST["name"], title = request.POST["title"], message = request.POST["message"], publicationDate = timezone.now())
         post.save()
         context = {'post': post}
         return render(request, "post.html", context)
-    if (request.method == "GET"):
-        context = {'posts' : Post.objects.all().order_by('publicationDate')}
-        # print(Post.objects.all()[1].date)
-        return render(request, "posts.html", context)
+    
+class updatePost(View):
+    contador = 0
+
+    def prueba(self):
+        print("prueba")
+        yield "data: <p> Prueba1 </p>\n\n"
+        print("prueba")
+        yield "data: <p> Prueba2 </p>\n\n"
+        yield "data: <p> Prueba3 </p>\n\n"
+
+    
+    def get (self, request):
+        response =  StreamingHttpResponse(self.prueba())
+        response['Content-Type'] = 'text/event-stream'
+        response['Cache-Control'] = 'no-cache'
+        return response
+
